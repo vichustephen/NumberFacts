@@ -1,0 +1,59 @@
+<resources>
+    <string name="app_name">Number#Facts</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="category">Category :</string>
+    <string name="welcome_to_numberfacts_powered_by_numbersapi">Welcome To NumberFacts Powered by NumbersApi</string>
+    <string name="enter_some_value">Enter some Value</string>
+    <string name="_1_to_999999">1 to 999999</string>
+    <string name="search">Search</string>
+    <string name="month">Month</string>
+    <string name="enter_a_date">Enter a Date</string>
+    <string name="day">Day</string>
+    <string name="year">Year</string>
+    <string name="settingsTitle">App Settings</string>
+    <string name="app_theme">App Theme</string>
+    <string name="colorRed">Red</string>
+    <string name="key_theme_color">key_theme_color</string>
+    <string name="pop_head">Pop Head</string>
+    <string name="pop_summary">Pop head that shows Random Facts</string>
+    <string name="pop_head_key">pop_head_key</string>
+    <string name="random_facts">Random Facts</string>
+    <string name="settings">Settings</string>
+    <string name="share">share</string>
+
+    <string-array name="types">
+        <item>Random</item>
+        <item>Math</item>
+        <item>Date</item>
+        <item>Year</item>
+        <item>Trivia</item>
+    </string-array>
+
+    <string-array name="months">
+        <item>January</item>
+        <item>February</item>
+        <item>March</item>
+        <item>April</item>
+        <item>May</item>
+        <item>June</item>
+        <item>July</item>
+        <item>August</item>
+        <item>September</item>
+        <item>October</item>
+        <item>November</item>
+        <item>December</item>
+    </string-array>
+
+    <string-array name="colorList">
+        <item>Red</item>
+        <item>Blue</item>
+        <item>Green</item>
+    </string-array>
+    <string-array name="colorListValues">
+        <item>Red</item>
+        <item>Blue</item>
+        <item>Green</item>
+    </string-array>
+
+</resources>

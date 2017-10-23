@@ -1,0 +1,85 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/windowBg"
+    tools:context="com.seven.zion.numberfacts.RandomFacts">
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/Dfab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|top"
+        android:layout_marginEnd="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginTop="100dp"
+        android:clickable="true"
+        app:fabSize="normal"
+        app:pressedTranslationZ="12dp"
+        app:srcCompat="@drawable/ic_replay_white_24dp" />
+
+    <Spinner
+        android:id="@+id/monthSpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="40dp"
+        android:ems="10"
+        android:hint="@string/month"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/Dyear"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="145dp"
+        android:layout_marginStart="145dp"
+        android:layout_marginTop="30dp"
+        android:ems="10"
+        android:hint="@string/day"
+        android:inputType="number" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="200dp">
+
+        <TextView
+            android:id="@+id/Dresp"
+            android:layout_width="340dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
+            android:fontFamily="serif"
+            android:text="@string/enter_a_date"
+            android:textAlignment="viewStart"
+            android:textAllCaps="false"
+            android:textColor="@color/textColor"
+            android:textSize="27sp" />
+    </ScrollView>
+
+    <Button
+        android:id="@+id/Dbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="250dp"
+        android:layout_marginStart="250dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/button_design"
+        android:text="@string/search"
+        android:textColor="@color/ButtonColor"
+        tools:text="Search" />
+
+    <com.seven.zion.numberfacts.DigitTextView
+        android:id="@+id/DdigitTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="150dp"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="100dp" />
+
+
+</FrameLayout>

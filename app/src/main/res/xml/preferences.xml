@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="@string/settingsTitle">
+
+        <ListPreference android:entries="@array/colorList"
+            android:title="@string/app_theme"
+            android:key="@string/key_theme_color"
+            android:summary="@string/colorRed"
+            android:defaultValue="@string/colorRed"
+            android:entryValues="@array/colorListValues"/>
+
+        <SwitchPreference android:defaultValue="false"
+            android:summary="@string/pop_summary"
+            android:title="@string/pop_head"
+            android:key="@string/pop_head_key"/>
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

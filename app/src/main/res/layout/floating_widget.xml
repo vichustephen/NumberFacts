@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_view"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+<RelativeLayout
+    android:id="@+id/collapsedView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/collapsedViewImage"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:src="@mipmap/ic_launcher_numberfacts_round"
+        android:layout_marginTop="8dp"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/collapsedCloseBtn"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginStart="40dp"
+        android:src="@drawable/ic_close"
+        tools:ignore="ContentDescription" />
+
+</RelativeLayout>
+
+        <FrameLayout
+            android:id="@+id/openView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/factsView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/pop_head"
+                android:text="@string/app_name"
+                android:textAppearance="@android:style/TextAppearance.DeviceDefault"
+                android:textColor="@android:color/background_light" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/openCloseBtn"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/ic_close"
+                    tools:ignore="ContentDescription" />
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="35dp"
+                    android:layout_marginLeft="35dp"
+                    android:id="@+id/replay"
+                    android:src="@drawable/ic_replay_black_24dp"
+                    tools:ignore="ContentDescription" />
+
+            </RelativeLayout>
+
+
+        </FrameLayout>
+
+</FrameLayout>

@@ -1,0 +1,88 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/windowBg"
+    tools:context="com.seven.zion.numberfacts.RandomFacts">
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/Tfab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|top"
+        android:layout_marginEnd="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginTop="100dp"
+        android:clickable="true"
+        app:fabSize="normal"
+        app:pressedTranslationZ="12dp"
+        app:srcCompat="@drawable/ic_replay_white_24dp" />
+
+    <EditText
+        android:id="@+id/Trnum"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="30dp"
+        android:ems="10"
+        android:hint="@string/_1_to_999999"
+        android:inputType="number" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="200dp">
+
+        <TextView
+            android:id="@+id/Tresp"
+            android:layout_width="340dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
+            android:fontFamily="cursive"
+            android:text="@string/enter_some_value"
+            android:textAlignment="viewStart"
+            android:layout_gravity="start"
+            android:textAllCaps="false"
+            android:textColor="@color/textColor"
+            android:textSize="33sp"
+            android:textStyle="italic" />
+    </ScrollView>
+
+    <Button
+        android:id="@+id/Trbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="250dp"
+        android:layout_marginStart="250dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/button_design"
+        android:text="@string/search"
+        android:textColor="@color/ButtonColor"
+        tools:text="Search" />
+
+    <com.seven.zion.numberfacts.DigitTextView
+        android:id="@+id/TdigitTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="140dp"
+        android:layout_marginStart="140dp"
+        android:visibility="gone"
+        android:layout_marginTop="100dp" />
+
+    <TextView
+        android:id="@+id/counterT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="130dp"
+        android:layout_marginStart="130dp"
+        android:layout_marginTop="110dp"
+        android:background="@drawable/counter_bg"
+        android:text=""
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:textColor="@android:color/background_light"
+        android:textSize="18sp" />
+
+</FrameLayout>
