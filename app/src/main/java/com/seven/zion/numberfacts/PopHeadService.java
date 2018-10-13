@@ -3,7 +3,7 @@ package com.seven.zion.numberfacts;
 import android.app.Service;
 import android.content.Intent;
 import android.graphics.PixelFormat;
-import android.os.Handler;
+import android.os.Build;
 import android.os.IBinder;
 import android.provider.ContactsContract;
 import android.view.Gravity;
@@ -40,6 +40,7 @@ public class PopHeadService extends Service {
     RequestQueue queue;
     Thread thread;
     String url;
+    private int PARAM;
 
     public PopHeadService() {
     }
@@ -63,10 +64,14 @@ public class PopHeadService extends Service {
         url = "http://numbersapi.com/random";
         queue = Volley.newRequestQueue(this);
 
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O)
+            PARAM = WindowManager.LayoutParams.TYPE_APPLICATION_OVERLAY;
+        else
+            PARAM = WindowManager.LayoutParams.TYPE_PHONE;
         final WindowManager.LayoutParams params = new WindowManager.LayoutParams(
                 WindowManager.LayoutParams.WRAP_CONTENT,
                 WindowManager.LayoutParams.WRAP_CONTENT,
-                WindowManager.LayoutParams.TYPE_PHONE,
+                PARAM,
                 WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE,
                 PixelFormat.TRANSLUCENT);
         params.gravity = Gravity.TOP | Gravity.START;

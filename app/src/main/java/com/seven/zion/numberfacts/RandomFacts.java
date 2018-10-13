@@ -3,8 +3,6 @@ package com.seven.zion.numberfacts;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.util.Log;
@@ -28,7 +26,6 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
-
 /**
  * A simple {@link Fragment} subclass.
  */
@@ -40,7 +37,7 @@ public class RandomFacts extends Fragment implements AdapterView.OnItemSelectedL
     FloatingActionButton refresh;
     Spinner typeSpinner;
     String url;
-    FrameLayout BG;
+    //String AdsAppId = "ca-app-pub-6586731755050121~1655994233";
     public RandomFacts() {
         // Required empty public constructor
     }
@@ -57,11 +54,14 @@ public class RandomFacts extends Fragment implements AdapterView.OnItemSelectedL
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_random_facts, container, false);
         typeSpinner = (Spinner)view.findViewById(R.id.spinner);
-        BG = (FrameLayout)view.findViewById(R.id.BgLayout);
         ArrayAdapter<CharSequence> types = ArrayAdapter.createFromResource(getActivity(),R.array.types,android.R.layout.simple_spinner_item);
         types.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         typeSpinner.setAdapter(types);
         typeSpinner.setOnItemSelectedListener(this);
+        /*MobileAds.initialize(getActivity(),AdsAppId);
+        AdView adView = new AdView(getActivity());
+        adView.setAdSize(AdSize.BANNER);
+        adView.setAdUnitId("ca-app-pub-6586731755050121/8848088548");*/
         refresh = (FloatingActionButton)view.findViewById(R.id.Rfab);
         resp = (TextView)view.findViewById(R.id.Resp);
         queue = Volley.newRequestQueue(getContext());

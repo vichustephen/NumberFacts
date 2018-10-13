@@ -31,7 +31,6 @@ public class settingsActivity extends AppCompatActivity{
         finish();
         return super.onSupportNavigateUp();
     }
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         SharedPreferences pref = getApplicationContext().getSharedPreferences(TAG_THEME,0);
